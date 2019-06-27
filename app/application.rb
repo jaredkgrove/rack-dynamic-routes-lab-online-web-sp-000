@@ -9,10 +9,10 @@ class Application
       if @@items.inculde?(item_name)
         resp.write @@items.detect{|item| item.name == item_name}.name
       else
-        req.status = 400
+        resp.status = 400
       end
     else
-      req.status = 404
+      resp.status = 404
     end
     resp.finish
   end
