@@ -6,7 +6,7 @@ class Application
 
     if req.path.match("/items/")
       item_name = req.path.split("/items/").last
-      if @@items.inculde?(item_name)
+      if @@items.include?(item_name)
         resp.write @@items.detect{|item| item.name == item_name}.name
       else
         resp.status = 400
