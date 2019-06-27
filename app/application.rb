@@ -8,5 +8,6 @@ class Application
     else
       req.status = 404
     end
+    resp.finish
   end
 end
